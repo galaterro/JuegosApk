@@ -1,6 +1,7 @@
 package es.adrigala.juegosapk;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,6 +18,12 @@ public class MainActivity extends AppCompatActivity {
     public void cambiarPantalla(View view) {
         Toast t = Toast.makeText(this, "pedos", Toast.LENGTH_LONG);
         t.show();
-        startActivity(new Intent(MainActivity.this, RegisterActivity.class));
+        SharedPreferences sp = getSharedPreferences("credenciales", MODE_PRIVATE);
+        if(sp.contains("id")){
+            startActivity(new Intent(this, LoginActivity.class));
+        }else{
+            startActivity(new Intent(this, RegisterActivity.class));
+        }
+
     }
 }

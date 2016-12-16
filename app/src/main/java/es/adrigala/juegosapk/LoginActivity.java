@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
     private EditText etId;
@@ -21,7 +22,7 @@ public class LoginActivity extends AppCompatActivity {
     public void validar(View view) {
         SharedPreferences sp = getSharedPreferences("credenciales", MODE_PRIVATE);
         if(etId.getText().toString().equals(sp.getString("id", null)) && etPass.getText().toString().equals(sp.getString("password", null))){
-
+            Toast.makeText(this, "Bienvenido, " + sp.getString("nombre", null), Toast.LENGTH_SHORT).show();
         }
     }
 }

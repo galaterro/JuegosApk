@@ -17,6 +17,6 @@ public class MainActivity extends AppCompatActivity {
     public void cambiarPantalla(View view) {
         Toast t = Toast.makeText(this, "pedos", Toast.LENGTH_LONG);
         t.show();
-        startActivity(new Intent(MainActivity.this, LoginActivity.class));
+        startActivity(new Intent(MainActivity.this, RegisterActivity.class));
     }
 }

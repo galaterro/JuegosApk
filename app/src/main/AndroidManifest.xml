@@ -23,13 +23,13 @@
         <activity
             android:name=".ScrollingActivity"
             android:label="@string/title_activity_scrolling"
-            android:parentActivityName=".LoginActivity"
+            android:parentActivityName=".RegisterActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="es.adrigala.juegosapk.LoginActivity" />
+                android:value="es.adrigala.juegosapk.RegisterActivity" />
         </activity>
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".RegisterActivity"></activity>
     </application>
 
 </manifest>
